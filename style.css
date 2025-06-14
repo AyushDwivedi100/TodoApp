@@ -1,0 +1,104 @@
+:root {
+  --background: black;
+  --text-color: white;
+  --primary-color: #888888;
+  --secondary-color: #444444;
+  --accent-color: #00ffc4;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+}
+body {
+  width: 100vw;
+  height: 100dvh;
+  background-color: var(--background);
+  align-content: center;
+  justify-items: center;
+}
+.container{
+    width: 50vw;
+}
+.header h1 {
+  color: var(--accent-color);
+  font-size: 5rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 1vw;
+}
+.write-bar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.write-bar input {
+  background-color: var(--background);
+  caret-color: var(--accent-color);
+  border: none;
+  padding: 1vw 2vw;
+  flex-grow: 1;
+  width: 100%;
+  border-radius: 1000px;
+  border: 0.1rem solid var(--primary-color);
+}
+.write-bar input:focus {
+  outline: none;
+}
+.write-bar button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--accent-color);
+  height: 100%;
+  border: none;
+  padding: 0 2vw;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+.to-do-container{
+    margin-top: 2vh;
+    padding:1vw;
+}
+.to-do-container ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+.to-do-container li{
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.text-box{
+    display: none;
+}
+.toDoCheck{
+    color: var(--text-color);
+    border:0.1rem solid var(--accent-color);
+    border-radius: 50%;
+    align-self: center;
+    align-items: center;
+}
+.text-box:checked ~ .toDoCheck{
+    background-color: var(--accent-color);
+}
+.text-box:checked ~ .toDoCheck svg{
+    fill:var(--text-color);
+}
+.todo-container{
+    padding: 3%;
+    flex-grow: 1;
+}
+.delete-btn{
+    background-color: transparent;
+    border: none;
+}
