@@ -1,0 +1,16 @@
+@media (max-width:560px){
+    .write-bar{
+        display: flex;
+        flex-direction: column;
+    }
+    .write-bar button{
+        width: 100%;
+        margin-top: 1vw;
+        position: static;
+        padding: 1vw 2vw;
+    }
+}
+@media (max-width:450px){
+    .to-do-container li{
+    }
+}

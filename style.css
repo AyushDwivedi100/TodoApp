@@ -24,7 +24,7 @@ body {
 }
 .header h1 {
   color: var(--accent-color);
-  font-size: 5rem;
+  font-size: min(5rem,calc(8vw + 1px));
   font-weight: 800;
   text-align: center;
   padding: 1vw;
@@ -59,46 +59,53 @@ body {
   border-radius: 1000px;
   cursor: pointer;
 }
-.to-do-container{
-    margin-top: 2vh;
-    padding:1vw;
+.to-do-container {
+  margin-top: 2vh;
+  padding: 1vw;
 }
-.to-do-container ul{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap:1rem;
+.to-do-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
-.to-do-container li{
-    background-color: var(--secondary-color);
-    border-radius: 1rem;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
+.to-do-container li {
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+  padding: 2% 4%;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
 }
-.text-box{
-    display: none;
+.text-box {
+  display: none;
 }
-.toDoCheck{
-    color: var(--text-color);
-    border:0.1rem solid var(--accent-color);
-    border-radius: 50%;
-    align-self: center;
-    align-items: center;
+.toDoCheck {
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
 }
-.text-box:checked ~ .toDoCheck{
-    background-color: var(--accent-color);
+.text-box:checked ~ .toDoCheck {
+  background-color: var(--accent-color);
 }
-.text-box:checked ~ .toDoCheck svg{
-    fill:var(--text-color);
+.text-box:checked ~ .toDoCheck svg {
+  fill: var(--text-color);
 }
-.todo-container{
-    padding: 3%;
-    flex-grow: 1;
+.todo-container {
+  padding: 1% 3%;
+  flex-grow: 1;
+  font-size: min(calc(3vw + 1px),1rem);
 }
-.delete-btn{
-    background-color: transparent;
-    border: none;
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
