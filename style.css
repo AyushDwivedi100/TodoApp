@@ -18,13 +18,14 @@ body {
   background-color: var(--background);
   align-content: center;
   justify-items: center;
+  overflow-x: hidden;
 }
-.container{
-    width: 50vw;
+.container {
+  width: 50vw;
 }
 .header h1 {
   color: var(--accent-color);
-  font-size: min(5rem,calc(8vw + 1px));
+  font-size: min(5rem, calc(8vw + 1px));
   font-weight: 800;
   text-align: center;
   padding: 1vw;
@@ -73,7 +74,7 @@ body {
 .to-do-container li {
   background-color: var(--secondary-color);
   border-radius: 2rem;
-  padding: 2% 4%;
+  padding: 1% 2%;
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
@@ -99,13 +100,24 @@ body {
 .text-box:checked ~ .toDoCheck svg {
   fill: var(--text-color);
 }
+.text-box:checked ~ .todo-container{
+    text-decoration: line-through;
+    color:var(--primary-color);
+}
 .todo-container {
   padding: 1% 3%;
   flex-grow: 1;
-  font-size: min(calc(3vw + 1px),1rem);
+  font-size: min(calc(3vw + 1px), 1rem);
+  cursor: pointer;
 }
-.delete-btn {
+.delete-btn{
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+.delete-btn svg{
+    transition: fill 300ms ease;
+}
+.delete-btn svg:hover{
+    fill: red;
 }
