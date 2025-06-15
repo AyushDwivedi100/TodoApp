@@ -100,9 +100,9 @@ body {
 .text-box:checked ~ .toDoCheck svg {
   fill: var(--text-color);
 }
-.text-box:checked ~ .todo-container{
-    text-decoration: line-through;
-    color:var(--primary-color);
+.text-box:checked ~ .todo-container {
+  text-decoration: line-through;
+  color: var(--primary-color);
 }
 .todo-container {
   padding: 1% 3%;
@@ -110,14 +110,14 @@ body {
   font-size: min(calc(3vw + 1px), 1rem);
   cursor: pointer;
 }
-.delete-btn{
+.delete-btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.delete-btn svg{
-    transition: fill 300ms ease;
+.delete-btn svg {
+  transition: fill 300ms ease;
 }
-.delete-btn svg:hover{
-    fill: red;
+.delete-btn svg:hover {
+  fill: red;
 }
