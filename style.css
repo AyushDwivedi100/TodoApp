@@ -59,9 +59,6 @@ img{
 .write-bar input:focus {
   outline: none;
 }
-::placeholder{
-  color:black;
-}
 .write-bar button {
   position: absolute;
   top: 0;
