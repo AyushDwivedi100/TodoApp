@@ -1,5 +1,5 @@
 :root {
-  --text-color: black;
+  --text-color: rgb(73, 73, 73);
   --primary-color: #888888;
   --secondary-color: #444444;
   --accent-color: #00ffc4;
@@ -51,7 +51,7 @@ img{
 .write-bar input {
   background-color: rgba(255,255,255,0.3);
   border: none;
-  padding: 1vw 2vw;
+  padding: 1vw calc(5vw + 2rem) 1vw 2vw;
   flex-grow: 1;
   width: 100%;
   border-radius: 1000px;
@@ -121,6 +121,7 @@ img{
   flex-grow: 1;
   font-size: min(calc(3vw + 1px), 1rem);
   cursor: pointer;
+  overflow-wrap: anywhere;
 }
 .delete-btn {
   background-color: transparent;

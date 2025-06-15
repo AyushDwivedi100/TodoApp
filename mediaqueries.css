@@ -9,6 +9,9 @@
     position: static;
     padding: 1vw 2vw;
   }
+  .write-bar input{
+    padding:1vw 2vw;
+  }
   .container{
     width: -webkit-fill-available;
   }
