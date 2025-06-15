@@ -1,6 +1,5 @@
 :root {
-  --background: black;
-  --text-color: white;
+  --text-color: black;
   --primary-color: #888888;
   --secondary-color: #444444;
   --accent-color: #00ffc4;
@@ -15,13 +14,24 @@
 body {
   width: 100vw;
   height: 100dvh;
-  background-color: var(--background);
   align-content: center;
   justify-items: center;
   overflow-x: hidden;
 }
+img{
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  object-fit: fill;
+}
 .container {
   width: 50vw;
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding:1%;
+  border: 0.1rem solid white;
 }
 .header h1 {
   color: var(--accent-color);
@@ -37,17 +47,18 @@ body {
   align-items: center;
 }
 .write-bar input {
-  background-color: var(--background);
-  caret-color: var(--accent-color);
+  background-color: rgba(255,255,255,0.3);
   border: none;
   padding: 1vw 2vw;
   flex-grow: 1;
   width: 100%;
   border-radius: 1000px;
-  border: 0.1rem solid var(--primary-color);
 }
 .write-bar input:focus {
   outline: none;
+}
+::placeholder{
+  color:black;
 }
 .write-bar button {
   position: absolute;
@@ -59,6 +70,8 @@ body {
   padding: 0 2vw;
   border-radius: 1000px;
   cursor: pointer;
+  font-weight:700 ;
+  color: white;
 }
 .to-do-container {
   margin-top: 2vh;
@@ -72,7 +85,7 @@ body {
   gap: 1rem;
 }
 .to-do-container li {
-  background-color: var(--secondary-color);
+  background-color: rgba(255,255,255,0.3);
   border-radius: 2rem;
   padding: 1% 2%;
   display: flex;
@@ -117,6 +130,7 @@ body {
 }
 .delete-btn svg {
   transition: fill 300ms ease;
+  fill: black;
 }
 .delete-btn svg:hover {
   fill: red;
